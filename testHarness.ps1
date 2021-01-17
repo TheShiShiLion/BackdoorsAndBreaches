@@ -10,7 +10,7 @@ Get-Module -Name BackdoorsAndBreaches
 Clear-Host
 
 # Vanilla Game on local network - no FTPS upload.  Ideal for playing on corporate network with PlayerOutputPath to share drive accessible by all players
-$game =Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Evee" -IncidentMasterOutputPath "C:\temp\master\" -PlayerOutputPath "C:\temp\player\"
+$game =Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath "C:\temp\master\" -PlayerOutputPath "C:\temp\player\"
 
 # Game hosted on a remote server e.g. FTPS.  Obviously may not work on corporate networks where firewall rules don't allow chosen file tfer protocol acccess outbound.
 # Easier to play from off corporate network if connectivity issues are encountered.

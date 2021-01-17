@@ -1,9 +1,3 @@
-# Be sure to list each exported functions in the FunctionsToExport field of the module manifest file.
-# This improves performance of command discovery in PowerShell.
-#Import-Module $PSScriptRoot\classes\Card.psm1
-#import-Module $PSScriptRoot\classes\Player.psm1
-#Import-Module $PSScriptRoot\classes\Game.psm1
-
 Using module '.\classes\Card.psm1'
 Using module '.\classes\Player.psm1'
 Using module '.\classes\Game.psm1'
