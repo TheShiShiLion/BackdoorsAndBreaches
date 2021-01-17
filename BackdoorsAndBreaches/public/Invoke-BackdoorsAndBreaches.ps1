@@ -128,7 +128,7 @@ function Invoke-BackdoorsAndBreaches
         [String]$PlayerOutputPath,
 
         [Parameter( Position=4, Mandatory=$false, ValueFromPipelineByPropertyName=$false, HelpMessage="An optional parameter for playing from a shared hosting environment by transferring files using FTPS.  Requires local install of WinSCP.  Enter the local path to the FTPS Configuration file.  A sample FTPS configuration file can be found in the module directory." )]
-        [ValidateScript({Test-Path $_} )]
+        [ValidateScript({ if($null -ne $_) {Test-Path $_} else { $true }})]
         [String]$FileXferConfig,
 
         [Parameter( Position=5, Mandatory=$false, ValueFromPipelineByPropertyName=$false, HelpMessage="An optional parameter to specify the location of the default tabletop template" )]
@@ -154,7 +154,7 @@ function Invoke-BackdoorsAndBreaches
         $banner = Get-Content -Path $PSScriptRoot+"\..\templates\banner.template.txt"
 
         $game = [Game]::new()
-        if( $null -ne $FileXferConfig )
+        if( $FileXferConfig -ne "")
         {
             $game.EnableFileXfer( $FileXferConfig )
             $banner = $banner.Replace( "[PLAYER_URL]", $game.FileXfer.URLforPlayers )
