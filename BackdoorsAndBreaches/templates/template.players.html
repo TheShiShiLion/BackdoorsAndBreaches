@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="8">
+<link rel="stylesheet" href="./css/style.css">
+<script>
+function copyToClipboard( text ) {
+ window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+} 
+</script>
+</head>
+<body class="[Template_Role]" onresize="resize_outputs()" onload="resize_outputs()">
+
+<h2 class="[Template_Role]">Backdoors & Breaches&nbsp;<a href="https://www.blackhillsinfosec.com/wp-content/uploads/2020/05/BB-Visual-Guide-PRINT.pdf" target="_blank"><img class="plain" src="images/info.png" alt="Instructions" height="15" width="15"></a></h2>
+<div>
+<div class="velvet">
+	<div class="row">
+	  <div class="column">
+		<div class="cardbox">
+		[Procedure_1]
+		<h3 onclick="copyToClipboard('$game.ToggleProcedure(0)')">Procedure 1</h3>
+		[Procedure_1_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Procedure_2]
+		<h3 onclick="copyToClipboard('$game.ToggleProcedure(1)')">Procedure 2</h3>
+		[Procedure_2_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Procedure_3]
+		<h3  onclick="copyToClipboard('$game.ToggleProcedure(2)')">Procedure 3</h3>
+		[Procedure_3_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Procedure_4]
+		<h3 onclick="copyToClipboard('$game.ToggleProcedure(3)')">Procedure 4</h3>
+		[Procedure_4_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Procedure_5]
+		<h3 onclick="copyToClipboard('$game.ToggleProcedure(4)')">Procedure 5</h3>
+		[Procedure_5_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+			<h3>Players</h3>
+			<div class="scroll" id="players">
+				<div class="player">
+				[players_turns]
+				</div>
+			</div>
+			<h3>&nbsp;</h3>
+		</div>
+	  </div>
+	</div>
+	
+	<br />
+  
+	<div class="row">
+	  <div class="column">
+		<div class="cardbox">
+		[InitialCompromise]
+		<h3>Initial Compromise</h3>
+		[InitialCompromise_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Persistence]
+		<h3>Persistence</h3>
+		[Persistence_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[PivotAndEscalate]
+		<h3>Pivot and Escalate</h3>
+		[PivotAndEscalate_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[C2AndExfil]
+		<h3>C2 and Exfil</h3>
+		[C2AndExfil_status]
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+		[Inject_deck]
+		<h3>Inject Deck</h3>
+		[Inject_deck_status]		
+		</div>
+	  </div>
+	  <div class="column">
+		<div class="cardbox">
+			<h3>Gameplay</h3>
+			<div class="scroll" id="gameplay">
+				[gameplay]
+			</div>
+			<h3 class="play" onclick="copyToClipboard('$game.TakeTurn($false)')">Take Turn</h3>
+		</div>
+	  </div>
+	</div>
+  
+</div>
+</div>
+<footer class="[Template_Role]">Backdoors &amp Breaches Copyright Black Hills Information Security &copy 2019-2021.  BackdoorsAndBreaches project courtesy of @TheShiShiLion.  Developed for charity - Please consider sponsoring or donating.</footer>
+<script>
+function resize_outputs() 
+{
+	if(document.getElementById("[Size_Reference_Card_Front]")){
+		var c = document.getElementById("[Size_Reference_Card_Front]");
+	} else {
+		var c = document.getElementById("[Size_Reference_Card_Back]");
+	}
+	document.getElementById("players").setAttribute("style","height:"+(c.height)+"px");
+	document.getElementById("gameplay").setAttribute("style","height:"+(c.height)+"px");
+}
+</script>
+</body>
+</html>
+
+
