@@ -1,3 +1,5 @@
+<img src="resources/BackdoorsAndBreaches.PNG">
+
 # Backdoors & Breaches
 Open-Source PowerShell module developed by @TheShiShiLion to allow online play of Backdoors And Breaches card game devised by Black Hills Information Security (BHIS).
 
