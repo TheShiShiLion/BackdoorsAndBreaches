@@ -29,13 +29,15 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 ** INVITE SNIP **>>>>
 
 Hi there,
-You've been invited to play Backdoors & Breaches online.  Backdoors & Breaches is an Incident Response Card Game from Black Hills Information Security and Active Countermeasures.
+You've been invited to play Backdoors & Breaches.  Backdoors & Breaches is an Incident Response Card Game from Black Hills Information Security and Active Countermeasures.
 The BackdoorsAndBreaches project is an open-source translation to allow online gameplay.  Follow @TheShiShiLion on Twitter to track project updates.
 
-Please consider donating to St Michael's House Grosvenor School for children with special needs if you enjoy playing.  Donations will support investment in learning facilities for
-the children including occupational, speech and language therapy.  Many thanks in advance.  You can donate here:
+Please consider donating to St Michael's House Grosvenor School for children with special needs if you enjoy playing.  St. Michaels House Grosvenor is a school that caters for
+children aged 4-18 years with moderate to severe and profound intellectual disability, some of whom would also have autism. The schools aim is to maximise pupils’ skills and
+independence as they develop into young adults.  Donations will contribute directly towards engaging specialist teachers to support the schools target for students to graduate
+with a Department of Education and Skills certificate for the first time - a stepping stone to work placements.  You can donate here:
 
-[TODO]
+https://www.idonate.ie/BackdoorsAndBreaches
 
 Your game can be accessed from the following location(s):
 
@@ -46,8 +48,8 @@ Enjoy!
 @TheShiShiLion
 
 
-The BackdoorsAndBreaches project is maintained here:
-[TODO]
+The BackdoorsAndBreaches project is maintained here: https://github.com/TheShiShiLion/BackdoorsAndBreaches
+
 
 More infortmation on Backdoors & Breaches can be found here:
 https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/

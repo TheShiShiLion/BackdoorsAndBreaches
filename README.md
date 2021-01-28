@@ -2,15 +2,27 @@
 Open-Source PowerShell module developed by @TheShiShiLion to allow online play of Backdoors And Breaches card game devised by Black Hills Information Security (BHIS).
 
 ## Goal:
-To create an Open-Source version of Backdoors & Breaches to allow remote working teams to play together.  This should be done with minimal external dependencies, effort or additional investment to getting a game setup on LAN or - if required - hosted on the web on an ad-hoc basis.  This would be an MVP to allow a team to play Backdoors and Breaches with near zero effort or investment in time. You can find full details on the BHIS website here https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/.
+To create an Open-Source version of Backdoors & Breaches to allow remote working teams to play together and hopefully raise some money for charity.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.
 
 ## Donate
-If you and the people you play with like the experience you might consider making a donation to a charity very close to the developer’s heart.  You'll find the details here:
-If you're a company and planning to use this as part of ongoing incident training and preparedness - why not support and encourage future developments by making a donation or becoming a sponsor.
-There's already a backlog of features in consideration and periodic updates and enhancements are planned.  Follow @TheShiShiLion on Twitter to keep updated on new releases.
+If you like the project you might consider making a donation to a charity very close to the developer’s heart.  St. Michaels House Grosvenor is a school that caters for children aged 4-18 years with moderate to severe and profound intellectual disability, some of whom would also have autism. The schools aim is to maximise pupils’ skills and independence as they develop into young adults.  Donations will contribute directly towards engaging specialist teachers to support the schools target for students to graduate with a Department of Education and Skills certificate for the first time - a stepping stone to work placements.
+
+You'll find the details here: https://www.idonate.ie/BackdoorsAndBreaches
+
+If you are a company and planning to use this project as part of ongoing incident training and preparedness - why not support and encourage future developments by making a donation or becoming a project sponsor (coming soon).
+
+There is already a backlog of features in consideration and periodic updates and enhancements are planned.  Follow @TheShiShiLion on Twitter to keep updated on new releases.
 
 ## Credits
-Backdoors And Breaches card game was devised by Black Hills Information Security.  The team at BHIS have been super supportive in the development of this project.  Particular thanks to Deb, Jason and John for the encouragent.
+Backdoors And Breaches card game was devised by Black Hills Information Security.  The team at BHIS have been super supportive in the development of this project.  Particular thanks to Deb, Jason and John for the encouragent.  You can find full details on the BHIS website here https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/.
+
+# Quick Start Guide from direct GitHub download
+
+1. Download the code package to a local directory using the preffered means on GitHub.
+2. Open a PowerShell Window
+3. Cd to the download directory
+4. Open the testHarness.ps1 file in PowerShell ISE or Visual Studio Code and follow the instructions
+
 
 ## Contribute
 All positive feedback and suggestions for improvement are appreciated.  Please also feel free to contribute to the code base.
@@ -23,7 +35,7 @@ All positive feedback and suggestions for improvement are appreciated.  Please a
 
 ## Design Considerations
 A web application would be ideal, with user registration and game scheduling etc but there were some constraints:
-- Limited time to invest (busy home and work life)
+- Limited time to invest
 - This has to be super simple to install and run
 - Don't want to be reliant upon a particular OS, Web/DB technology stack
 - By default - minimal installation or infrastructure requirement to play
@@ -53,7 +65,7 @@ Coming Soon
 
 Coming Soon
 
-# Shall We Play A Game?
+# Detailed Instructions: Shall We Play A Game?
 Now the game is installed - time to play:
 
 Step 1. If it doesn't already exist - create the directory where the Incident Master game file will be created or updated e.g., c:\temp\master
@@ -100,7 +112,7 @@ The Incident Master and Player files still need to be generated locally before u
 
 NOTE: Playing the game will automatically create and upload the "player" and "incidentmaster" files if they don't already exist.
 
-Copy the sample FileXfer.example.config file from the module input directory to your desktop for editing.  You can find the module install location by typing the following command at a PowerShell command prompt.  TODO
+The $env:PSModulePath environment variable contains a list of folder locations that are searched to find modules and resources.  Copy the sample FileXfer.example.config file from the module "input" subdirectory to your desktop for editing.
 
 $game=Invoke-BackdoorsAndBreaches -Players "[Enter name of players separated by a comma]" -IncidentMasterOutputPath "[Path from Step 1]" -PlayerOutputPath "[Path from Step 2]" -FileXferConfig "C:\Users\Smith\Desktop\ftps.config" -Verbose
 
@@ -108,6 +120,4 @@ Example:
 
 $game=Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath "C:\temp\master" -PlayerOutputPath "C:\temp\player" -FTPSConfig "C:\temp\ftps.config" -Verbose
 
-## A quick intro on YouTube
 
-Coming Soon

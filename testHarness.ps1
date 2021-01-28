@@ -1,5 +1,4 @@
 Set-Location $PSScriptRoot
-clear-host
 Remove-Module -Name BackdroorsAndBreaches -Force -ErrorAction SilentlyContinue
 Uninstall-Module -Name BackdoorsAndBreaches -Force -ErrorAction SilentlyContinue
 
@@ -9,14 +8,18 @@ Import-Module .\BackdoorsAndBreaches\BackdoorsAndBreaches.psd1 -Force
 Get-Module -Name BackdoorsAndBreaches
 Clear-Host
 
-# Create directories for testing
+# Create Incident Master output directory on local system for testing
 $MasterPath = "C:\temp\master\"
 If(!(test-path $MasterPath)) { New-Item -ItemType Directory -Force -Path $MasterPath }
+
+# Create Players directory - this can also be a mapped network share where players on the local network will also have access
 $PlayerPath = "C:\temp\player\"
 If(!(test-path $PlayerPath)) { New-Item -ItemType Directory -Force -Path $PlayerPath }
 
-# Vanilla Game on local network - no FTPS upload.  Ideal for playing on corporate network with PlayerOutputPath to share drive accessible by all players
+# Vanilla Game on local system/network - no FTPS upload.  Ideal for playing on corporate network with PlayerOutputPath to share drive accessible by all players
 $game =Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath $MasterPath -PlayerOutputPath $PlayerPath
+
+# The successful run of the previous command should output an invite templte which can be cut-and-pasted into and email before sending to the players separately.
 
 # Game hosted on a remote server e.g. FTPS.  Obviously may not work on corporate networks where firewall rules don't allow chosen file tfer protocol acccess outbound.
 # Easier to play from off corporate network if connectivity issues are encountered.
