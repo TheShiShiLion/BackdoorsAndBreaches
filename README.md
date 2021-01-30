@@ -1,10 +1,11 @@
 <a href="https://www.idonate.ie/BackdoorsAndBreaches" target="_blank"><img src="resources/BackdoorsAndBreaches.PNG"></a>
 
+
 # Backdoors & Breaches
 Open-Source PowerShell module developed by @TheShiShiLion to allow online play of Backdoors And Breaches card game devised by Black Hills Information Security (BHIS).
 
 ## Goal
-To create an Open-Source version of Backdoors & Breaches to allow remote working teams to play together and hopefully raise some money for charity.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.  Coordination and discussion takes place via separate medium such as Microsoft Teams, Webex or similar online meeting facility.  Dashboards are available for both the Players and the Incident Master.  These are periodically updated based upon the how the gameplay progresses with incident cards being revealed when the Incident Master decides.
+To create an Open-Source PowerShell module to allow remote working teams to play Backdoors & Breaches together online.  Hopefully to raise some money for charity in the process.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.  Coordination and discussion takes place via separate medium such as Microsoft Teams, Webex or similar online meeting facility.  Dashboards are available for both the Players and the Incident Master.  These are periodically updated based upon the how the gameplay progresses with incident cards being revealed when the Incident Master decides.
 
 ## Please donate to an excellent charitable cause
 Please consider making a donation to a charity very close to the developer’s heart.  St. Michaels House Grosvenor is a school that caters for children aged 4-18 years with moderate to severe and profound intellectual disability, some of whom would also have autism. The schools aim is to maximise pupils’ skills and independence as they develop into young adults.  Donations will contribute directly towards engaging specialist teachers to support the schools target for students to graduate with a Department of Education and Skills certificate for the first time - a stepping stone to work placements.
@@ -68,7 +69,7 @@ Coming Soon
 
 ## Installation Quick Start Guide Video
 
-Coming Soon
+[![Backdoors & Breaches PowerShell Module](http://img.youtube.com/vi/jYA5fQv0eFM/0.jpg)](http://www.youtube.com/watch?v=jYA5fQv0eFM "Backdoors & Breaches PowerShell Module")
 
 ## Detailed Instructions: Shall We Play A Game?
 Now the game is installed it's time to play.
@@ -97,11 +98,18 @@ Example:
 PS> $game =Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath "C:\temp\master" -PlayerOutputPath "C:\temp\player"
 ```
 
+
 Step 4: The script will generate an invitation template which can be shared via email with the players being invited to play.  This includes a link to where the player dashboard can be accessed.  Copy and paste text between the "** INVITE SNIP **>>>>" and "<<<** END INVITE SNIP **" into an email and forward to the players.  The player dashboard has a blue background.
+
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.1.jpg" height="100">
 
 Step 5: The incident master will follow a different link (also displayed when the script module is run).  This Incident Master dashboard has a red background.  Once created - navigate to the incidentmaster link in a browser and interact with the cards to see commands that can be run against the created $game object.  These should be copied and pasted to the PowerShell window where the game was initated as commanads are run against the now pre-existing $game object.
 
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.2.jpg" height="100">
+
 Step 6: The incident master should introduce the game objectives and talk the players through the planned gameplay.  It may be helpful to show the instructions page from BHIS which can be accessed through the "i" image beside the top banner.  The specific scenario the incident master invents (typically based upon the initial access card) should be introduced.  Give the players 5 minutes to familiarise themselves with the procedure cards they've been dealt.  When the players are comfortable the incident master should ask what procedure card they want to play -OR- a different procedure not represented by a card (which won't give a +3 modifier to the next dice roll)
+
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.3.jpg" height="100">
 
 Step 7(I): The incident master should confirm the procedure the players want to play by name.  The incident master can then click the related card in the incident master (red) dashboard then copy and paste the text that appears in the dialogue into the PowerShell window used to initiate the game.
 
@@ -137,6 +145,7 @@ Step 7(II): If the players don't want to play one of their procedures they can o
 # Play a prodedure of the players choice/invention/experience (no card selected - no +3 modifier)
 PS> $game.TakeTurn($false)
 ```
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.4.jpg" height="100">
 
 Step 8: The incident master then decides if
 
@@ -159,6 +168,7 @@ PS> $game.RevealPivotAndEscalate()
 # Players solve C2 and Exfil - reveal card
 PS> $game.RevealC2AndExfil()
 ```
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.5.jpg" height="100">
 
 Step 10: Repeat steps 7 and 8 with the players until 10 turns have been take or the players solve the 4 incident cards.  The incident master may want to introduce their own story narrative as the game progresses.
 
@@ -179,6 +189,6 @@ $game=Invoke-BackdoorsAndBreaches -Players "[Enter name of players separated by 
 Example:
 
 ```powershell
-PS> $game=Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath "C:\temp\master" -PlayerOutputPath "C:\temp\player" --FileXferConfig "C:\Users\Smith\Desktop\ftps.config"  -Verbose
+PS> $game=Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath "C:\temp\master" -PlayerOutputPath "C:\temp\player" --FileXferConfig "C:\Users\Smith\Desktop\fileXfer.config"  -Verbose
 ```
 
