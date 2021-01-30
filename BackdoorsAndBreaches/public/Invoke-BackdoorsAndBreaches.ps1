@@ -170,8 +170,8 @@ function Invoke-BackdoorsAndBreaches
         $game.setWWWMasterRoot( $IncidentMasterOutputPath )
         $game.setWWWPlayerRoot( $PlayerOutputPath)
 
-        $banner = $banner.Replace( "[PLAYER_PATH]", $PlayerOutputPath )
-        $banner = $banner.Replace( "[INCIDENT_MASTER_PATH]", $IncidentMasterOutputPath)
+        $banner = $banner.Replace( "[PLAYER_PATH]", $PlayerOutputPath+"index.html" )
+        $banner = $banner.Replace( "[INCIDENT_MASTER_PATH]", $IncidentMasterOutputPath+"index.html")
         foreach( $line in $banner ) { Write-Host $line -ForegroundColor Cyan  }
 
         Write-Verbose "[+] Adding Cards ..."
@@ -186,9 +186,8 @@ function Invoke-BackdoorsAndBreaches
             Write-Verbose "[+] Player $($player)"
             $game.AddPlayer( $player )
         }
-        Write-Verbose "[+] Game Play"
         $game.Play()
-        Write-Verbose "[+] Returning"
+        Write-Host "[+] Ready to Play"
         return $game
     }
     catch

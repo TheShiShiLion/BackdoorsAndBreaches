@@ -55,10 +55,18 @@ More infortmation on Backdoors & Breaches can be found here:
 https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/
 
 
-<- ** END INVITE SNIP ** Copy, paste and send the above to the players via email
+<<<** END INVITE SNIP **
 
-Your Incident Master interface can be accessed from the following location(s):
+ Your Incident Master interface can be accessed from the following location(s):
 
 [INCIDENT_MASTER_PATH]
 [INCIDENT_MASTER_URL]
 
+Next steps:
+
+1. Copy, paste and send the above invitation template to the players via email. Consider including online Teams, Webex or similar invitation to host the game meeting.
+2. Access your dashboard and devise narrative based upon incident cards dealt
+3. Players should access their dashboards
+4. Explain rules to players and introduce the scenario
+5. Ask players to play their first procedure to solve the incident cards
+6. Play the selected procedure by clicking the respective card on the Incident Master dashboard.  Copy the command from the pop-up and paste to this window
