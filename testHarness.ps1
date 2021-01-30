@@ -4,6 +4,9 @@
 Clear-Host
 Set-Location $PSScriptRoot
 
+# Unblock all files related to the module
+Get-ChildItem $PSScriptRoot -recurse | Unblock-File
+
 # Remove residue from any previous install
 Remove-Module -Name BackdroorsAndBreaches -Force -ErrorAction SilentlyContinue
 Uninstall-Module -Name BackdoorsAndBreaches -Force -ErrorAction SilentlyContinue
@@ -18,11 +21,11 @@ Get-Module -Name BackdoorsAndBreaches
 
 # Create Incident Master output directory on local system for testing
 $MasterPath = "C:\temp\master\"
-If(!(test-path $MasterPath)) { New-Item -ItemType Directory -Force -Path $MasterPath }
+If(!(test-path $MasterPath)) { New-Item -ItemType Directory -Force -Path $MasterPath | Out-Null}
 
 # Create Players directory - this can/should also be a mapped network share where the players on the local network will also have access
 $PlayerPath = "C:\temp\player\"
-If(!(test-path $PlayerPath)) { New-Item -ItemType Directory -Force -Path $PlayerPath }
+If(!(test-path $PlayerPath)) { New-Item -ItemType Directory -Force -Path $PlayerPath | Out-Null }
 
 # Vanilla Game on local system/network - no FTPS upload.  Ideal for playing on corporate network with PlayerOutputPath to share drive accessible by all players
 $game =Invoke-BackdoorsAndBreaches -Players "Alice,Bob,Carol,Dave,Eve" -IncidentMasterOutputPath $MasterPath -PlayerOutputPath $PlayerPath
