@@ -51,6 +51,10 @@ This project is developed under MIT License.  The only additional request from t
 3. Cd to the BackdoorsAndBreaches-master package directory
 4. Open the testHarness.ps1 file in PowerShell ISE or Visual Studio Code and follow the instructions
 
+## Installation Quick Start Guide Video
+
+[![Backdoors & Breaches PowerShell Module](http://img.youtube.com/vi/jYA5fQv0eFM/0.jpg)](http://www.youtube.com/watch?v=jYA5fQv0eFM "Backdoors & Breaches PowerShell Module")
+
 ## Installation from GitHub
 1. Download the code package to a local directory using the preferred means on GitHub.  Unzip to a local directory if required.
 2. Open a PowerShell Window
@@ -66,10 +70,6 @@ You'll find a test harness script that may be helpful in the root of the code pa
 ## From PowerShell Gallery
 
 Coming Soon
-
-## Installation Quick Start Guide Video
-
-[![Backdoors & Breaches PowerShell Module](http://img.youtube.com/vi/jYA5fQv0eFM/0.jpg)](http://www.youtube.com/watch?v=jYA5fQv0eFM "Backdoors & Breaches PowerShell Module")
 
 ## Detailed Instructions: Shall We Play A Game?
 Now the game is installed it's time to play.
@@ -111,7 +111,7 @@ Step 6: The incident master should introduce the game objectives and talk the pl
 
 <img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.3.jpg" height="100">
 
-Step 7(I): The incident master should confirm the procedure the players want to play by name.  The incident master can then click the related card in the incident master (red) dashboard then copy and paste the text that appears in the dialogue into the PowerShell window used to initiate the game.
+Step 7(I): The incident master should confirm the procedure the players want to play by name.  The incident master can then click the related card in the incident master (red) dashboard then copy and paste the text that appears in the dialogue into the PowerShell window used to initiate the game.  Examples of what will appear in the cut-and-paste window follows:
 
 ```powershell
 # Play first prodedure
@@ -145,8 +145,6 @@ Step 7(II): If the players don't want to play one of their procedures they can o
 # Play a prodedure of the players choice/invention/experience (no card selected - no +3 modifier)
 PS> $game.TakeTurn($false)
 ```
-<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.4.jpg" height="100">
-
 Step 8: The incident master then decides if
 
     (a) the players roll is greater than 10 AND
@@ -154,6 +152,8 @@ Step 8: The incident master then decides if
     (c) the procedure as described would positively identify one of the target game cards - initial compromise, Persistence, Pivot and Escalate, C2 and Exfil
 
 The decision can be made to reveal an incident card.  Examples are as follows:
+
+<img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.4.jpg" height="100">
 
 ```powershell
 # Players solve Initial Compromise - reveal card
