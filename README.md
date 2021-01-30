@@ -122,13 +122,13 @@ PS> $game.PlayProcedure(3)
 The incident master will then be prompted with next steps as follows:
 
 ```
-    > Turn (1) : Ask players to describe the procedure they want to use.  Press [RETURN] to proceed when done:
+> Turn (1) : Ask players to describe the procedure they want to use.  Press [RETURN] to proceed when done:
 ```
 
 WARNING: Once the incident master presses [RETURN] the dice will be rolled and result displayed on both dashboards.
 
 ```
-    > Turn (1) : Rolled n including modifier - can players solve a card?  Press [RETURN] to proceed when done:
+> Turn (1) : Rolled n including modifier - can players solve a card?  Press [RETURN] to proceed when done:
 ```
 
 Step 7(II): If the players don't want to play one of their procedures they can opt to play/describe one of their own known procedures.  However, they will not receive the +3 modifier on the dice roll.  To do this the incident master can click the "Take Turn" text at the bottom of the Gameplay box on the incident master (red) dashboard.  Then copy and paste the text that appears in the dialogue into the PowerShell window used to initiate the game. This will initiate the turn taking for the players without using a procedure.
@@ -172,8 +172,8 @@ NOTE: Playing the game will automatically create and upload the "player" and "in
 
 The $env:PSModulePath environment variable contains a list of folder locations that are searched to find modules and resources.  Copy the sample FileXfer.example.config file from the module "input" subdirectory to your desktop for editing.
 
-```powershell
-PS> $game=Invoke-BackdoorsAndBreaches -Players "[Enter name of players separated by a comma]" -IncidentMasterOutputPath "[Path from Step 1]" -PlayerOutputPath "[Path from Step 2]" -FileXferConfig "[Path to Config file]" -Verbose
+```
+$game=Invoke-BackdoorsAndBreaches -Players "[Enter name of players separated by a comma]" -IncidentMasterOutputPath "[Path from Step 1]" -PlayerOutputPath "[Path from Step 2]" -FileXferConfig "[Path to Config file]" -Verbose
 ```
 
 Example:
