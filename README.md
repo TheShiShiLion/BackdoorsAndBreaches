@@ -2,17 +2,17 @@
 
 
 # Backdoors & Breaches
-Open-Source PowerShell module developed by @TheShiShiLion to allow online play of Backdoors And Breaches card game devised by Black Hills Information Security (BHIS).
+Open-Source PowerShell module to allow online play of Backdoors & Breaches card game devised by Black Hills Information Security (BHIS).  Dealing cards, players role assignment and turns, injects, procedures played, dice rolls and incident card reveals are tracked and displayed on dashboards.  Participants get to fully concentrate on the incident response gameplay and this also takes some pressure off the Incident Master.  Realistic scenarios are generated based upon cards dealt.  Security incident response team members use their knowledge of controls, processes and procedures in each tabletop exercise.  The direct benefit is for players to identify any assumptions, biases or gaps in controls feeding into future security incident preparation.
 
-## Goal
-To create an Open-Source PowerShell module to allow remote working teams to play Backdoors & Breaches together online.  Hopefully to raise some money for charity in the process.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.  Coordination and discussion takes place via separate medium such as Microsoft Teams, Webex or similar online meeting facility.  Dashboards are available for both the Players and the Incident Master.  These are periodically updated based upon the how the gameplay progresses with incident cards being revealed when the Incident Master decides.
+## Project Goals
+To create an Open-Source PowerShell module to allow remote working teams to play Backdoors & Breaches together online.  Hopefully raise some money for <a href="https://www.idonate.ie/BackdoorsAndBreaches" target="_blank">charity</a> in the process.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.  Coordination and discussion takes place via separate medium such as Microsoft Teams, Webex or similar online meeting facility.  Dashboards are available for both the Players and the Incident Master.  These are periodically updated based upon the how the gameplay progresses with incident cards being revealed when the Incident Master decides.  There is already a backlog of features in consideration and periodic updates and enhancements are planned.  Follow @TheShiShiLion on Twitter to keep updated on new releases.
 
-## Please donate to an excellent charitable cause
+## Please donate to an excellent Charity
 Please consider making a donation to a charity very close to the developer’s heart.  St. Michaels House Grosvenor is a school that caters for children aged 4-18 years with moderate to severe and profound intellectual disability, some of whom would also have autism. The schools aim is to maximise pupils’ skills and independence as they develop into young adults.  Donations will contribute directly towards engaging specialist teachers to support the schools target for students to graduate with a Department of Education and Skills certificate for the first time - a stepping stone to work placements.
 
 You'll find the details on <a href="https://www.idonate.ie/BackdoorsAndBreaches" target="_blank">idonate.ie</a>
 
-If you are a company and planning to use this project as part of ongoing incident training and preparedness - why not support and encourage future developments by making a donation or becoming a project sponsor (coming soon).  There is already a backlog of features in consideration and periodic updates and enhancements are planned.  Follow @TheShiShiLion on Twitter to keep updated on new releases.
+If you are a company and planning to use this project as part of ongoing incident training and preparedness - why not support and encourage future developments by making a donation or becoming a project sponsor (coming soon).
 
 ## Credits
 Backdoors And Breaches card game was devised by Black Hills Information Security.  The team at BHIS have been super supportive in the development of this project.  Particular thanks to Deb, Jason and John for the encouragent.  You can find full details on the BHIS <a href="https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/" target="_blank">website</a> .
@@ -43,6 +43,9 @@ All positive feedback and suggestions for improvement are appreciated.  Please a
 
 ## License
 This project is developed under MIT License.  The only additional request from the developer is to continue to include the donation options for St. Michaels House Grosvenor School.
+
+## Dependencies
+Developed and tested on Windows 10.  Requires PowerShell 5.0 or above.  Optional remote file transfer functionality is dependent upon WinSCP API library.  Instructions for remote file transfer can be found at the bottom of this file and in the FileXfer.example.config in the package.
 
 # Quick Start Guide from direct GitHub download
 
@@ -107,11 +110,11 @@ Step 5: The incident master will follow a different link (also displayed when th
 
 <img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.2.jpg" height="100">
 
-Step 6: The incident master should introduce the game objectives and talk the players through the planned gameplay.  It may be helpful to show the instructions page from BHIS which can be accessed through the "i" image beside the top banner.  The specific scenario the incident master invents (typically based upon the initial access card) should be introduced.  Give the players 5 minutes to familiarise themselves with the procedure cards they've been dealt.  When the players are comfortable the incident master should ask what procedure card they want to play -OR- a different procedure not represented by a card (which won't give a +3 modifier to the next dice roll)
+Step 6: The incident master should introduce the game objectives and talk the players through the planned gameplay.  It may be helpful to show the instructions page from BHIS which can be accessed through the "i" image beside the top banner on the dashboards.  The specific scenario the incident master invents (typically based upon the initial access card) should be introduced.  Give the players 5 minutes to familiarise themselves with the procedure cards they've been dealt and ask any questions.  When the players are comfortable the incident master should ask what procedure card they want to play -OR- a different procedure not represented by a card (which won't give a +3 modifier to the next dice roll).
 
 <img src="resources/BackdoorsAndBreachesProject.TheShiShiLion.Test.3.jpg" height="100">
 
-Step 7(I): The incident master should confirm the procedure the players want to play by name.  The incident master can then click the related card in the incident master (red) dashboard then copy and paste the text that appears in the dialogue into the PowerShell window used to initiate the game.  Examples of what will appear in the cut-and-paste window follows:
+Step 7(I): The incident master should confirm the procedure the players want to play by name.  IMPORTANT: The incident master doesn't need to remember which method to call against the $game object.   They can click the related card in the incident master (red) dashboard.  A dialogue will appear with what command to run.  They can then copy and paste the command into the PowerShell terminal used to initiate the game.  Examples of what will appear in the cut-and-paste window follows:
 
 ```powershell
 # Play first prodedure
