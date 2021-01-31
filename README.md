@@ -2,7 +2,7 @@
 
 
 # Backdoors & Breaches
-Open-Source PowerShell module to allow online play of Backdoors & Breaches card game devised by Black Hills Information Security (BHIS).  Dealing cards, players role assignment and turns, injects, procedures played, dice rolls and incident card reveals are tracked and displayed on dashboards.  Participants get to fully concentrate on the incident response gameplay and this also takes some pressure off the Incident Master.  Realistic scenarios are generated based upon cards dealt.  Security incident response team members use their knowledge of controls, processes and procedures in each tabletop exercise.  The direct benefit is for players to identify any assumptions, biases or gaps in controls feeding into future security incident preparation.
+Open-Source PowerShell module to allow online play of Backdoors & Breaches card game devised by <a href="https://www.blackhillsinfosec.com" target="_blank">Black Hills Information Security (BHIS)</a>.  Dealing cards, players role assignment and turns, injects, procedures played, dice rolls and incident card reveals are tracked and displayed on dashboards.  Participants get to fully concentrate on the incident response gameplay and this also takes some pressure off the Incident Master.  Realistic scenarios are generated based upon cards dealt.  Security incident response team members use their knowledge of controls, processes and procedures in each tabletop exercise.  The direct benefit is for players to identify priorities, assumptions, biases or gaps in controls feeding into security incident preparation.
 
 ## Project Goals
 To create an Open-Source PowerShell module to allow remote working teams to play Backdoors & Breaches together online and hopefully raise some money for <a href="https://www.idonate.ie/BackdoorsAndBreaches" target="_blank">charity</a> in the process.  The project should allow a team play Backdoors and Breaches with minimal effort, additional infrastructure or investment in time.  Coordination and discussion takes place via separate medium such as Microsoft Teams, Webex or similar online meeting facility.  Dashboards are available for both the Players and the Incident Master.  These are periodically updated based upon the how the gameplay progresses with incident cards being revealed when the Incident Master decides.  There is already a backlog of features in consideration and periodic updates and enhancements are planned.  Follow @TheShiShiLion on Twitter to keep updated on new releases.
@@ -54,9 +54,15 @@ Developed and tested on Windows 10.  Requires PowerShell 5.0 or above.  Optional
 3. Cd to the BackdoorsAndBreaches-master package directory
 4. Open the testHarness.ps1 file in PowerShell ISE or Visual Studio Code and follow the instructions
 
-## Installation Quick Start Guide Video
+## Installation Quick Start and other guides
 
-[![Backdoors & Breaches PowerShell Module](http://img.youtube.com/vi/jYA5fQv0eFM/0.jpg)](http://www.youtube.com/watch?v=jYA5fQv0eFM "Backdoors & Breaches PowerShell Module")
+[![Backdoors & Breaches PowerShell Module](http://img.youtube.com/vi/jYA5fQv0eFM/0.jpg)](https://youtu.be/jYA5fQv0eFM "Backdoors & Breaches PowerShell Module install and test run")
+
+Instructions and guidance on playing the card game can be found here: https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/
+
+[![Backdoors & Breaches Card Game Introduction](http://img.youtube.com/vi/TAiJVr0zWMw/0.jpg)](https://youtu.be/TAiJVr0zWMw "Backdoors & Breaches Card Game Introduction")
+
+[![Playing the Backdoors & Breaches Card Game](http://img.youtube.com/vi/cCr8R1yrx4M/0.jpg)](https://youtu.be/cCr8R1yrx4M "Playing the Backdoors & Breaches Card Game")
 
 ## Installation from GitHub
 1. Download the code package to a local directory using the preferred means on GitHub.  Unzip to a local directory if required.
